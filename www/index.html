@@ -28,7 +28,13 @@
 
     // Wait for device API libraries to load
     //
-    
+
+    var myApp = new Framework7({
+    swipePanel: 'left'
+         });
+    </script>
+
+        <script type="text/javascript" charset="utf-8"> 
  function onLoad() {
     navigator.splashscreen.show();   
     animateNavBackIcon:true; 
@@ -81,7 +87,6 @@ function exitFromApp()
 </script> 
   
 <!--Exit app-->
-
 
    
           
@@ -260,14 +265,11 @@ function exitFromApp()
       </div>
     </div>
   </div>
-  
-
-      
+        
     <script src="js/framework7.js"></script>
     <script src="js/routes.js"></script>
-
     <script type="text/javascript" src="cordova.js"></script>
-   <script type="text/javascript" src="js/app2.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/CallNumber.js"></script>
     <script type="text/javascript" src="js/framework7.modular.js"></script>
     <script type="text/javascript" src="js/framework7.module.js"></script>
