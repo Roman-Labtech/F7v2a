@@ -56,7 +56,7 @@
     <plugin name="cordova-plugin-dialogs" />
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen.git"/> 
-    <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git"/>
+    <!--<plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git"/>-->
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     
     
