@@ -46,7 +46,7 @@ $$('.panel-close').on('click', function (e) {
 
 function phonecall()
 {
-    window.plugins.CallNumber.callNumber(onSuccess, onError,88313367613, true);
+    window.plugins.CallNumber.callNumber(onSuccess, onError,88313367613);
 }
 
 function buttonweb(){
