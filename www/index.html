@@ -47,7 +47,8 @@ function exitFromApp()
            navigator.app.exitApp();
        }; 
         
-function phonecall(){        
+function phonecall(){   
+    alert("phone 123");
 window.plugins.CallNumber.callNumber(onSuccess, onError, number, bypassAppChooser); }       
 </script> 
   
@@ -99,7 +100,7 @@ window.plugins.CallNumber.callNumber(onSuccess, onError, number, bypassAppChoose
                 <a href="/question/" class="panel-close">  <i class="material-icons icon-settings">help</i>Справка</a>
               </li>
                  <li>
-               <a href="#" data-ignore-cache="true" class="graylink panel-close" onClick="exitFromApp()">
+               <a href="#" data-ignore-cache="true" class="graylink" onClick="exitFromApp()">
                 <i class="material-icons icon-settings">cancel</i>Выход</a>
               </li>
               
