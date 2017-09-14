@@ -34,7 +34,8 @@
          });
     </script>
 
-        <script type="text/javascript" charset="utf-8"> 
+<script type="text/javascript" charset="utf-8">
+            
  function onLoad() {
     navigator.splashscreen.show();   
     animateNavBackIcon:true; 
@@ -71,20 +72,31 @@ if (n == 1) navigator.app.exitApp();
 ‘Bite To Eat’, // title
 ['OK', ‘Cancel’] // button labels
 );
-}, false)
-
-             } </script>
+}, false);} </script>
       
     <script>     
      
                              
-function exitFromApp()
-{
-           navigator.app.exitApp();
+function exitfromapp()
+{ navigator.app.exitApp();
 }; 
         
     
 </script> 
+ 
+    <script>
+        function phone1(){
+    phonedialer.dial(
+  "2125551212", 
+  function(err) {
+    if (err == "empty") alert("Unknown phone number");
+    else alert("Dialer Error:" + err);    
+  },
+  function(success) { alert('Dialing succeeded'); }
+ );}
+    </script>
+    
+
   
 <!--Exit app-->
 
@@ -101,8 +113,7 @@ function exitFromApp()
         <div class="page-content">
          <img src="img/222.png" width="100%">
       
-          <div class="block-title">Каталог продукции</div>
-        
+          
 
           <div class="list links-list">
             <ul>
@@ -133,7 +144,7 @@ function exitFromApp()
                 <a href="/question/" class="panel-close">  <i class="material-icons icon-settings">help</i>Справка</a>
               </li>
                  <li>
-               <a href="#" data-ignore-cache="true" class="graylink" onClick="exitFromApp()">
+               <a href="#" data-ignore-cache="true" class="graylink" onclick="exitFromApp()">
                 <i class="material-icons icon-settings">cancel</i>Выход</a>
               </li>
               
@@ -220,7 +231,7 @@ function exitFromApp()
             <div class="item-inner">
               <div class="item-title">
                Агрессивных сред
-                <div class="item-footer"></div>
+              <div class="item-footer"></div>
               </div>
               <div class="item-after"></div>
             </div>
@@ -260,6 +271,8 @@ function exitFromApp()
         
         
               </ul>
+              
+                   <button class="col button button-raised" onclick="phone1()">Button</button>
             </div>
           </div>
       </div>
