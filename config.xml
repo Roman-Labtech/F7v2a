@@ -1,12 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.katalog.labtech" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Лабораторные Технологии</name>
+<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>FW7-2</name>
     <description>
-        Каталог продукции ООО "Лабораторные Технологии" Пробоотборники газа и нефтепродуктов, вискозиметры, микрошприцы. 
+        A basic Framework7 template for PhoneGap.
     </description>
-    <author email="labtechno.roman@yandex.ru" href="http://laboff.ru">
-        Laboratornye technologii
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
     </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -40,17 +48,35 @@
         <icon density="xxhdpi" src="res/icon/android/drawable-xxhdpi-icon.png" />
         <icon density="xxxhdpi" src="res/icon/android/drawable-xxxhdpi-icon.png" />
     </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
-    <engine name="android" spec="^6.2.3" />
-    <plugin name="CordovaCallNumberPlugin" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin" />
+    <preference name="DisallowOverscroll" value="true" />
 
-    <plugin name="cordova-plugin-console" spec="1.0.7" />
-    <plugin name="cordova-plugin-dialogs" />
-    <plugin name="cordova-plugin-inappbrowser" />
-    <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen" />
-    <plugin name="cordova-plugin-statusbar" spec="1.0.1" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
+<plugin name="cordova-plugin-console" spec="1.0.7" />
+<plugin name="cordova-plugin-statusbar" spec="1.0.1" />
+<plugin name="cordova-plugin-whitelist" spec="1.2.2" />
+<plugin name="cordova-plugin-splashscreen-master" />   
+  
+    
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name = "SplashScreen" value = "screen" />
+    <preference name = "SplashScreenDelay" value = "3000" />
+    
+    <preference name = "SplashMaintainAspectRatio" value = "true" />
+    <splash src="res/screen.png" />
+    
+    <platform name="android">
+    <!-- you can use any density that exists in the Android project -->
+    <splash src="img/screen.png" density="land-hdpi"/>
+    <splash src="img/screen.png" density="land-ldpi"/>
+    <splash src="img/screen.png" density="land-mdpi"/>
+    <splash src="img/screen.png" density="land-xhdpi"/>
+
+    <splash src="img/screen.png" density="port-hdpi"/>
+    <splash src="img/screen.png" density="port-ldpi"/>
+    <splash src="img/screen.png" density="port-mdpi"/>
+    <splash src="img/screen.png" density="port-xhdpi"/>
+    <icon src="icon.png" />
+</platform>
+   <!-- <splash src="/img/i-f7-material.png"/>-->
+   	
+
 </widget>
