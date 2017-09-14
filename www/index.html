@@ -66,13 +66,21 @@ if (n == 1) navigator.app.exitApp();
 }, false)
 
              } </script>
- <script>
-          function exitFromApp()
-       {
+             
+ <script>     
+function exitFromApp()
+{
            navigator.app.exitApp();
        }; 
-      </script>   
-    
+</script>   
+<!--Exit app-->
+<script>
+    function(buttonIndex) 
+    {if(buttonIndex == 1) { console.log("navigator.app.exitApp"); 
+     navigator.app.exitApp(); } }
+</script> 
+   
+          
     
 </head>
 <body>
@@ -109,7 +117,8 @@ if (n == 1) navigator.app.exitApp();
                 <a href="/doplist/" class="panel-close"> <i class="material-icons icon-settings">done</i>Дополнительно</a>
               </li>
                  <li>
-                <a href="/phonecall/" class="panel-close"><i class="material-icons icon-settings">call</i>Позвонить нам</a>
+              
+                <a href="/phonecall/" class="panel-close" onclick="phonecall()" data-ignore-cache="true"><i class="material-icons icon-settings">call</i>Позвонить нам</a>
               </li>
                  <li>
                 <a href="/question/" class="panel-close">  <i class="material-icons icon-settings">help</i>Справка</a>
