@@ -29,25 +29,31 @@ var app = new Framework7({
 });
 
 document.addEventListener("deviceready", onDeviceReady, false); 
+
 function onDeviceReady() { 
     document.addEventListener("backbutton", onBackKeyDown, false);
+    
     document.getElementById("openBrowser").addEventListener("click", openBrowser);
     document.getElementById("QRalert").addEventListener("click", dialogAlert);
     console.log(navigator.notification);
-} 
-function onBackKeyDown() { mainView.router.back(); }
+};
+
+function onBackKeyDown() { 
+    mainView.router.back(); 
+alert("BackKeyPress");};
 
 function ClosePanel_left(){
 $$('.panel-close').on('click', function (e) {
         myApp.closePanel(animated);
     });    
   
-}
+};
 
 function phonecall()
 {
-    window.plugins.CallNumber.callNumber(onSuccess, onError,88313367613);
-}
+    window.plugins.CallNumber.callNumber(onSuccess, onError,88313367613,true);
+    alert("phonecall");
+};
 
 function buttonweb(){
   document.getElementById("openBrowser").addEventListener("click", openBrowser);  
@@ -81,7 +87,7 @@ function openBrowser() {
    function exitCallback() {
       console.log('Browser is closed...')
    }
-}
+};
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
@@ -109,3 +115,10 @@ function createContentPage() {
         '  </div>' +
         '</div>'
     )};
+
+function ClosePanel_left(){
+$$('.panel-close').on('click', function (e) {
+        myApp.closePanel(animated);
+    });    
+  
+}
