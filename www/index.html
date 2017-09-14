@@ -29,56 +29,29 @@
     function onLoad() {
     navigator.splashscreen.show();   
     animateNavBackIcon:true; 
-   // document.addEventListener("deviceready", onDeviceReady, false);    
+    document.addEventListener("deviceready", onDeviceReady, false);    
     };
-
-    // device APIs are available
-    //    
+  
     </script> 
      
   <script type="text/javascript" charset="utf-8" src="js/cordova_plugins.js">
   </script>
-   <script> document.addEventListener("deviceready", appReady, false); 
-             function appReady(){ 
-               document.addEventListener('backbutton', function (e) {
-e.preventDefault();
-/ Check for open panels /
-if ($$('.panel.active').length > 0) {
-f7.closePanel();
-return;
-}
-/ Check for go back in history /
-var view = f7.getCurrentView();
-if (!view) return;
-if (view.history.length > 1) {
-view.router.back();
-return;
-}
-Quit app /
-navigator.notification.confirm(
-‘Exit Application ?’, // message
-function (n) {
-if (n == 1) navigator.app.exitApp();
-},
-‘Bite To Eat’, // title
-['OK', ‘Cancel’] // button labels
-);
-}, false)
 
-             } </script>
-             
- <script>     
+    <script>     
+     
+                             
 function exitFromApp()
 {
            navigator.app.exitApp();
        }; 
-</script>   
-<!--Exit app-->
-<script>
-    function(buttonIndex) 
-    {if(buttonIndex == 1) { console.log("navigator.app.exitApp"); 
-     navigator.app.exitApp(); } }
+        
+function phonecall(){        
+window.plugins.CallNumber.callNumber(onSuccess, onError, number, bypassAppChooser); }       
 </script> 
+  
+<!--Exit app-->
+
+
    
           
     
